@@ -4,7 +4,7 @@
 
 ## 下载与安装
 
-从右侧 Releases 下载 `research-workflow-suite-v0.1.1.zip`，解压到固定目录。不要在 ZIP 内运行，也不要安装后移动目录。
+从右侧 Releases 下载 `research-workflow-suite-v0.1.2.zip`，解压到固定目录。不要在 ZIP 内运行，也不要安装后移动目录。
 
 1. 准备 Windows 10/11、Python 3.12、Zotero 8–10，并启动 Zotero。新电脑可双击 **Install-New-PC.cmd**，或右键在终端运行 `powershell -NoProfile -ExecutionPolicy Bypass -File .\Install.ps1 -InstallApps`，通过 winget 安装所需基础软件；系统安装确认需要本人完成。
 2. 双击 **Install.cmd**。自动创建独立 Python 环境、安装核心依赖、生成适合本机路径的 Zotero XPI，并进入 Notion 配置向导。已有环境可重复运行。

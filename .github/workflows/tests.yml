@@ -1,5 +1,9 @@
 name: Test portable source
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:
@@ -19,6 +23,8 @@ jobs:
       - run: python -m unittest discover -s notion-workflows -q
       - run: python scripts/run_tests.py
         working-directory: zotero-citation-sync
+      - name: Install LibreOffice for real DOCX rendering tests
+        run: choco install libreoffice-fresh -y --no-progress
       - run: python -m pytest paper-format-plugin/tests -q
       - run: node --test paper-format-plugin/tests/test_bridge.js
       - run: python scripts/package_release.py

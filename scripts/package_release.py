@@ -6,7 +6,7 @@ from audit_public import ROOT, audit
 names = audit()
 out = ROOT / 'dist'
 out.mkdir(exist_ok=True)
-archive = out / 'research-workflow-suite-v0.1.1.zip'
+archive = out / 'research-workflow-suite-v0.1.2.zip'
 manifest = []
 with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as z:
     for name in sorted(names):
