@@ -2,3 +2,5 @@ pypdf>=6,<7
 networkx>=3,<4
 Pillow>=12,<13
 fonttools>=4.55,<5
+numpy>=2,<3
+scipy>=1.13,<2
