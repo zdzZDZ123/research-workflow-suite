@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "Paper Deep Reading → Notion",
+  "version": "0.3.0",
+  "description": "同步 Paper Chat 精读，并在 Zotero 中发现 Notion 论文关系。",
+  "applications": {
+    "zotero": {
+      "id": "paper-deep-reading@local.research",
+      "strict_min_version": "8.0",
+      "strict_max_version": "10.*"
+    }
+  }
+}

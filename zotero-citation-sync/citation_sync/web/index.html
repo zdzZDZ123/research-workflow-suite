@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="citation-sync-token" content="__SESSION_TOKEN__"><title>Zotero Citation Sync</title>
+<link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body><div class="app"><aside><div class="mark">Z<span>↗</span></div><strong>Citation Sync</strong><p>本地引文工作台</p>
+<nav><a href="#document">论文与文库</a><a href="#queue">待处理引用</a><a href="#session">确认式同步</a><a href="#history">历史与恢复</a></nav>
+<div class="aside-note">预览版 0.1.1<br>Mac Word 实机验收待完成<br>批量自动写入未启用</div></aside>
+<main><header><div><p class="eyebrow">ZOTERO + MICROSOFT WORD</p><h1>把引用请求变成可核对的修改</h1><p class="muted">扫描批注，核对文献与原句，再通过 Zotero 官方 Word 插件完成动态引文。</p></div><span id="host" class="pill">正在检查主机</span></header>
+<div id="message" role="status" aria-live="polite"></div>
+<section id="document"><div class="section-head"><h2>论文与文库</h2><span id="connection" class="muted">尚未连接</span></div>
+<label for="path">目标 DOCX 路径</label><div class="row"><input id="path" placeholder="选择本机 .docx 文件"><button id="pick">选择论文</button></div>
+<div class="row actions"><button id="connect">连接 Zotero</button><button class="primary" id="scan">扫描新增批注</button><span class="muted">文献库通过官方 Local API 读取</span></div>
+<div id="doc-summary" class="summary"></div></section>
+<section id="queue"><div class="section-head"><h2>待处理引用</h2><span id="queue-count" class="pill">0 项</span></div><p class="muted">来源论文 A 与拟引用论文 B 分开显示。标题候选、目标原句和研究证据都需要核对。</p>
+<div id="conflicts"></div><div id="tasks" class="empty">选择论文并扫描后，引用请求会出现在这里。</div></section>
+<section><h2>准备确认式同步</h2><div class="row"><label for="style">Zotero CSL 样式</label><select id="style"><option value="preserve">保留文档当前样式</option value="apa">APA</option><option value="ieee">IEEE</option><option value="vancouver">Vancouver</option><option value="nature">Nature</option></select></div>
+<label class="check"><input id="saved" type="checkbox">我已在 Word 保存原稿，并核对勾选项目的文献身份、插入位置及研究证据</label>
+<button id="prepare" class="primary">为勾选项目创建备份和工作副本</button><p class="muted">随后逐项使用 Word 中的 Zotero 官方对话框。正文及引用不会由此按钮直接改写。</p></section>
+<section id="session"><h2>确认式同步</h2><div id="session-body" class="empty">尚未创建工作副本。</div></section>
+<section id="history"><div class="section-head"><h2>历史与恢复</h2><button id="reload">刷新历史</button></div><div id="history-body" class="empty">暂无操作记录</div></section>
+<section id="recovery"><div class="section-head"><h2>中断恢复</h2><button id="check-recovery">检查中断记录</button></div><div id="recovery-body">正在检查本地任务状态。</div></section>
+<footer>论文、批注和检查结果保存在本机。恢复会生成新的恢复副本，工作副本及审计记录继续保留。<p><button id="quit">退出本地工作台</button></p></footer></main></div></body></html>

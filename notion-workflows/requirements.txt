@@ -1,0 +1,4 @@
+pypdf>=6,<7
+networkx>=3,<4
+Pillow>=12,<13
+fonttools>=4.55,<5

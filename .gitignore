@@ -1,0 +1,14 @@
+**/.venv/
+**/.runtime/
+**/private/
+**/dist/
+**/models/
+**/__pycache__/
+**/*.pyc
+**/*.egg-info/
+**/.pytest_cache/
+**/build/
+**/.deployment.local.json
+**/deep-reading-database.json
+**/.env
+**/.env.*

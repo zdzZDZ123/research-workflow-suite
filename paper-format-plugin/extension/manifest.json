@@ -1,0 +1,8 @@
+{
+  "manifest_version": 2,
+  "name": "Paper Formatter · 论文格式转换",
+  "version": "0.1.3",
+  "description": "在本机转换 DOCX/PDF 论文格式，保留附件身份、批注与可恢复版本。",
+  "author": "Local Research Tools",
+  "applications": {"zotero": {"id": "paper-formatter@local.research", "strict_min_version": "8.0", "strict_max_version": "10.*", "update_url": "https://paper-formatter.invalid/updates.json"}}
+}
