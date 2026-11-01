@@ -82,6 +82,6 @@ node --test .\tests\test_bridge.js
 .\.venv\Scripts\python.exe .\scripts\build.py
 ```
 
-`scripts/prepare_acceptance.py --xpi dist/paper-formatter-0.1.3-local.xpi --installed-binding` 生成隔离 profile、测试文库和验收 harness，检查真正的 XPI 及安装路径。harness 使用合成样稿，永不打包入正式 XPI；额外的 UI 回归在真实 Zotero DOM 中使用确定的本地接口样例，不调用模型或检索供应商。`scripts/smoke_pdf.py`、`scripts/smoke_extended.py` 用本机模型验证 PDF、双栏、表格和扫描件。`scripts/format_matrix.py` 与 `scripts/format_gallery.py` 生成本地多格式样稿和对比页；结果与边界见 [格式矩阵记录](docs/FORMAT-MATRIX.md)。`scripts/inspect_samples.py`、`scripts/run_sample_matrix.py` 与 `scripts/sample_gallery.py` 可在私有工作目录对用户样稿副本生成对照，`scripts/verify_sample_gallery.py` 检查链接和脚本。验收证据与未完成的外部配置见 [ACCEPTANCE.md](ACCEPTANCE.md)。
+`scripts/prepare_acceptance.py --xpi dist/paper-formatter-0.1.3-local.xpi --installed-binding` 生成隔离 profile、测试文库和验收 harness，检查真正的 XPI 及安装路径。harness 使用合成样稿，永不打包入正式 XPI；额外的 UI 回归在真实 Zotero DOM 中使用确定的本地接口样例，不调用模型或检索供应商。`scripts/smoke_pdf.py`、`scripts/smoke_extended.py` 用本机模型验证 PDF、双栏、表格和扫描件。`scripts/format_matrix.py` 与 `scripts/format_gallery.py` 生成本地多格式样稿和对比页；结果与边界见 [格式矩阵记录](../docs/VALIDATION.md)。`scripts/inspect_samples.py`、`scripts/run_sample_matrix.py` 与 `scripts/sample_gallery.py` 可在私有工作目录对用户样稿副本生成对照，`scripts/verify_sample_gallery.py` 检查链接和脚本。验收证据与未完成的外部配置见 [ACCEPTANCE.md](../docs/VALIDATION.md)。
 
 来源接口：[Zotero 官方菜单接口](https://www.zotero.org/support/dev/zotero_8_for_developers)、[Docling 离线选项](https://docling-project.github.io/docling/usage/advanced_options/)、[Brave Search API](https://api-dashboard.search.brave.com/app/documentation/web-search/get-started)。

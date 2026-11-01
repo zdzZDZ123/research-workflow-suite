@@ -10,7 +10,7 @@
 
 1. 将发布 ZIP 解压到本机文件夹。准备 Python 3.11 或更高版本、Zotero 10、Microsoft Word，以及 Word 中可正常使用的 Zotero 官方插件。
 2. 启动 Zotero，在高级设置中确认本机 Local API 已启用。应用只连接 `http://127.0.0.1:23119`，不需要 API 密钥，也不写 Zotero 文库。
-3. 运行 `Launch.command`；或打开预览应用包 `Zotero Citation Sync.app`。两种方式均打开本机浏览器界面，关闭 Codex 后仍独立运行。此包未经 Apple 签名或公证，若系统拒绝启动，可在解压目录的终端使用下列命令。
+3. 在该模块目录运行下列命令，打开本机浏览器界面，关闭 Codex 后仍独立运行。本合集不提供已签名的 macOS 应用包。
 
 ```sh
 python3 -m citation_sync
@@ -103,6 +103,6 @@ python3 scripts/verify_release.py
 
 `citation_sync/local_api.py` 负责 GET 数据接口；`requests.py` 负责来源、身份与位置；`docx_read.py` 只读解析；`word_review.py` 负责官方操作指引和保存结果检查；`service.py` 管理状态、备份与恢复；`server.py` 和 `web/` 提供本机 UI。
 
-升级前退出旧工作台，再解压新版启动；Mac 的应用数据目录保持不变。不要同时运行新旧版本写入同一数据目录。本轮保留了 0.1.0 源码包及升级前的应用状态备份，完成情况见 [0.1.1 迭代记录](docs/ITERATION-0.1.1.md)。
+升级前退出旧工作台，再解压新版启动；Mac 的应用数据目录保持不变。不要同时运行新旧版本写入同一数据目录。本轮保留了 0.1.0 源码包及升级前的应用状态备份，完成情况见 [0.1.1 迭代记录](../docs/WORKFLOWS.md)。
 
-详见 [环境报告](environment_report.md)、[三条集成路线可行性](docs/feasibility.md)、[已实测记录](ACCEPTANCE.md)、[限制与故障恢复](docs/LIMITATIONS.md)。
+详见 [环境报告](../docs/VALIDATION.md)、[三条集成路线可行性](docs/feasibility.md)、[已实测记录](../docs/VALIDATION.md)、[限制与故障恢复](docs/LIMITATIONS.md)。
